@@ -1,31 +1,53 @@
-const navbar = document.querySelector(".navbar");
+function scroll() {
+  const nav = document.querySelector('nav');
+  let lastScrollTop = 0;
+  let isScrollingUp = false;
 
-const navbarObserver = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-      if (!entry.isIntersecting) {
-         navbar.style.width = '100vw';
+  window.addEventListener('scroll', function () {
+    let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+      if (isScrollingUp) {
+        nav.style.opacity = 0;
+        isScrollingUp = false;
       }
-      else{
-        navbar.style.width = '80vw';
+    } else {
+      // Scrolling up
+      if (!isScrollingUp) {
+        nav.style.opacity = 1;
+        isScrollingUp = true;
       }
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
   });
-}, {
-  threshold: 0.1
-});
-
-
-navbarObserver.observe(document.querySelector('.home-container'));
-
-function cantScrollForASecond(){
-  document.body.style.overflow = 'hidden';
-  setTimeout(function(){
-    document.body.style.overflow = '';
-  },1500)
 }
 
-const viewMore = document.getElementById('viewMore');
-setTimeout(()=>{
-  viewMore.classList.remove("viewMoreAnim");
-}, 4000)
 
-cantScrollForASecond();
+function homeAnimation(){
+  const yellowBox = document.getElementById("small-box-yellow");
+  const mainShape = document.getElementById("mainShape");
+
+  yellowBox.classList.add('yellowBox-intersect');
+  mainShape.classList.add("mainShape-intersect");
+}
+
+function homeObserver(){
+  const home = document.querySelector(".home-container")
+  const observer = new IntersectionObserver(entries =>{
+    entries.forEach(entry =>{
+
+       if(entry.isIntersecting){
+         homeAnimation();
+       }
+       else{
+        
+       }
+
+    })
+  }, {threshold: 0.3})
+  observer.observe(home);
+}
+
+homeObserver();
+scroll();

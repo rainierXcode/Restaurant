@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animation.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Italianno&family=JetBrains+Mono:wght@700&family=Josefin+Sans:wght@700&family=Kameron&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Italianno&family=JetBrains+Mono:wght@700&family=Josefin+Sans:wght@700&family=Kameron&family=Josefin+Sans:wght@600&display=swap"
       rel="stylesheet"
     />
+
     <script src="index.js" defer></script>
     <title>Secreta</title>
   </head>
@@ -35,15 +37,15 @@
       </div>
 
       <ul class="navbar">
-        <li class="current-nav">Home</li>
-        <li>Menu</li>
-        <li>Contact</li>
+        <a class="current-nav">Home</a>
+        <a>Menu</a>
+        <a>Contact</a>
       </ul>
     </nav>
 
 
     <div class="home-container">
-          <div class="first-frame">
+      <div id="home-bg"></div>
              <div class="title-container">
                  <div class="main-title">
                     <div class="resto-name">Hacienda</div>
@@ -60,20 +62,46 @@
 
                  <button id="viewMore" class="viewMoreAnim">View More</button>
              </div>
-          </div>
-          <div class="second-frame"></div>
-          <img src="images/mainPic.svg" alt="" class="logo">
 
-          <div class="home-box-rotate">
-            <div id="box-rotate-first"></div>
-            <div id="box-rotate-second"> </div>
-          </div>
+             <div id="mainpic-container">
+             <img src="images/mainPic.svg" alt="" id="mainPic">
+              <div id="bigCircle"></div>
+              <div id="smallCircle"></div>
+             </div>
+             <div id="mainShape"></div>
     </div>
 
     <div class="second-container">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nobis, magni dignissimos animi culpa enim nostrum sequi debitis similique facilis mollitia commodi explicabo eveniet molestiae corporis aliquam nisi amet alias.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit assumenda, voluptatibus minus repellendus nesciunt corrupti officiis exercitationem saepe iste accusantium et fugiat dignissimos dolore dolorum ipsam sit. Magni, omnis excepturi.
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum corporis porro laudantium aliquam illum facilis molestias eum quis distinctio deserunt, doloremque, at nisi quaerat est ullam quam beatae iusto minima.
+          <div id="viewMenu">View Menu</div>
+
+         <ul class="category-container">
+
+           <li>
+              <img src="images/lumpia.jpg" alt="">
+              <div>STARTERS & SOUPS</div>
+              <a href="">Read More</a>
+           </li>
+
+           <li>
+            <img src="images/paksiw.jpg" alt="">
+            <div>MAIN COURSERS</div>
+            <a href="">Read More</a>
+          </li>
+
+         <li>
+          <img src="images/icecream.jpg" alt="">
+          <div>DESSERTS</div>
+          <a href="">Read More</a>
+        </li>
+
+       <li>
+        <img src="images/tea.jpg" alt="">
+        <div>DRINKS</div>
+        <a href="">Read More</a>
+      </li>
+
+         </ul>
+
     </div>
   </body>
 </html>

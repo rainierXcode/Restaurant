@@ -22,6 +22,7 @@ body::after {
   left: 0;
   bottom: 0;
   right: 0;
+  background-color: #fff;
   height: 100vh;
 }
 
@@ -82,6 +83,26 @@ nav {
   text-decoration: none;
 }
 
+.navbar a {
+  position: relative;
+}
+
+.navbar a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #ffd700;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar a:hover:after {
+  width: 100%;
+}
+
+
 .navbar .current-nav {
   color: #ffffff;
 }
@@ -93,9 +114,7 @@ nav {
   background-color: #1b1b1b;
 }
 
-.second-container {
-  height: 100vh;
-}
+
 
 .first-frame {
   width: calc(100vw - 300px);
@@ -127,8 +146,9 @@ nav {
 .resto-name {
   font-family: "Josefin Sans", sans-serif;
   font-size: 70px;
-  color: #ffd700;
+  color: #ffff;
   font-weight: 700;
+  text-shadow: 2px 2px #ffd700;
 }
 
 .description1 {
@@ -163,6 +183,14 @@ nav {
 }
 
 #viewMore:hover {
+  transform: translateY(-10px);
+}
+
+.category-container li a {
+  transition:transform 300ms ease;
+}
+
+.category-container li a:hover{
   transform: translateY(-10px);
 }
 
@@ -223,24 +251,52 @@ nav {
 }
 
 #home-bg {
-  background-image: url("images/urlBg.jpg");
+  background-image: url("/images/bg/urlBg.jpg");
   background-size: cover;
   opacity: 0.3;
 }
 
-.second-container {
-  height: 500px;
-  padding-top: calc(20px + var(--navbar-height));
+.menu-container {
+  min-height: 100vh;
   background-color: #fff;
+  position: relative;
 }
 
-#viewMenu {
+#menu-bg{
+background: url('/images/bg/secondUrlBg.jpg');
+background-size: cover;
+opacity: 0.5;
+height: 100%;
+width: 100%;
+z-index: -1;
+position: absolute;
+}
+
+
+
+#viewMenu{
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 40px;
+  font-size: 60px;
   color: #000;
+  height: 35vh;
+  width: 100%;
   opacity: 0.9;
   margin-bottom: 30px;
+  background: url("/images/bg/filipino-food.png");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#viewMenu div{
+  color: white; 
+  text-shadow: 3px 3px #254653;
+  -webkit-text-stroke: 1.5px #254653;
+  font-weight: 700;
 }
 
 .category-container {
@@ -248,7 +304,9 @@ nav {
   gap: 25px;
   justify-content: center;
   align-self: center;
-  height: 100%;
+  height: 500px;
+  padding-bottom: 50px;
+  padding-top: 20px;
 }
 
 .category-container li {
@@ -266,9 +324,15 @@ nav {
   font-weight: 600px;
 }
 
-.category-container li img {
+.category-image-container{
   width: 250px;
   height: 300px;
+  overflow: hidden;
+}
+
+.category-container li img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
   border-radius: 30px;
 }
@@ -285,4 +349,141 @@ nav {
   text-decoration: none;
   font-size: 15px;
   border-radius: 10px;
+}
+
+
+
+.menuOpen{
+  display: none;
+  height: 100vh;
+  box-sizing: border-box;
+  padding: 0px 100px 30px 100px;
+  padding-top: calc(10px + var(--navbar-height));
+}
+
+.back{
+  display: flex;
+  align-items: center;
+  gap:5px;
+  width: 80px;
+  justify-content: center;
+  transition: all ease 1s;
+}
+
+.back div:nth-child(2){
+  color: #000;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.menu-icon{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.foods {
+  display: flex;
+  flex-wrap: wrap; 
+  width: 100%;
+}
+
+
+
+
+.foods li{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  flex-basis: 33.33%; 
+  margin: 10px;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+
+
+.name-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.name-container::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  transition: all 1s;
+}
+
+
+
+.name-container:hover:after, .name-hover::after{
+  width: 100%;
+  background-color:  #E2725B;
+}
+
+
+
+.menu-food-name{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+}
+
+.menu-food-price, .menu-food-description{
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+}
+
+
+.menu-food-price{
+  margin-left: auto;
+  font-size: 16px;
+}
+
+.menu-food-description{
+  font-size: 14px;
+}
+
+
+
+.menu-food-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.menu-food-image-container{
+  height: 210px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.menu-food-image-container img, .category-image-container img{
+  transform-origin: 0 0;
+  transition: transform .25s, visibility .25s ease-in;
+  }
+
+.menu-food-image-container:hover img, .category-image-container:hover img{
+  transition: transform .5s ease-in-out;
+  transform: scale(1.4);
+  transform-origin: 0 0;
+}
+
+.menu-food-name, .menu-food-price, .menu-food-description{
+  color: #000;
+}
+
+
+.back:hover div{
+  transform: translateX(-10px);
+}
+
+#starters, #main-courses{
+  display: none;
 }

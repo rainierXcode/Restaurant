@@ -1,107 +1,444 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="animation.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Italianno&family=JetBrains+Mono:wght@700&family=Josefin+Sans:wght@700&family=Kameron&family=Josefin+Sans:wght@600&display=swap"
-      rel="stylesheet"
-    />
 
-    <script src="index.js" defer></script>
-    <title>Secreta</title>
-  </head>
-  <body>
-    <nav>
-      <div class="header-left">
-        <div id="small-box-yellow"></div>
-        <div>
-          <svg
-            width="30"
-            height="30"
-            viewBox="0 0 30 30"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M1.25 27.5C1.25 28.175 1.8125 28.75 2.5 28.75H18.75C19.45 28.75 20 28.175 20 27.5V26.25H1.25V27.5ZM10.625 11.25C5.9375 11.25 1.25 13.75 1.25 18.75H20C20 13.75 15.3125 11.25 10.625 11.25ZM4.525 16.25C5.9125 14.3125 8.8625 13.75 10.625 13.75C12.3875 13.75 15.3375 14.3125 16.725 16.25H4.525ZM1.25 21.25H20V23.75H1.25V21.25ZM22.5 6.25V1.25H20V6.25H13.75L14.0375 8.75H25.9875L24.2375 26.25H22.5V28.75H24.65C25.7 28.75 26.5625 27.9375 26.6875 26.9125L28.75 6.25H22.5Z"
-              fill="white"
-            />
-          </svg>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/animation.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Italianno&family=JetBrains+Mono:wght@700&family=Josefin+Sans&family=Josefin+Sans:wght@700&family=Kameron&family=Josefin+Sans:wght@700&family=Josefin+Sans:wght@600&display=swap"
+    rel="stylesheet" />
+
+  <script src="/javascript/index.js" defer></script>
+  <title>Secreta</title>
+</head>
+
+<body>
+  <nav>
+    <div class="header-left">
+      <div id="small-box-yellow"></div>
+      <div>
+        <svg id="logo" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M1.25 27.5C1.25 28.175 1.8125 28.75 2.5 28.75H18.75C19.45 28.75 20 28.175 20 27.5V26.25H1.25V27.5ZM10.625 11.25C5.9375 11.25 1.25 13.75 1.25 18.75H20C20 13.75 15.3125 11.25 10.625 11.25ZM4.525 16.25C5.9125 14.3125 8.8625 13.75 10.625 13.75C12.3875 13.75 15.3375 14.3125 16.725 16.25H4.525ZM1.25 21.25H20V23.75H1.25V21.25ZM22.5 6.25V1.25H20V6.25H13.75L14.0375 8.75H25.9875L24.2375 26.25H22.5V28.75H24.65C25.7 28.75 26.5625 27.9375 26.6875 26.9125L28.75 6.25H22.5Z"
+            fill="white" />
+        </svg>
+      </div>
+      <div id="secreta">Secreta</div>
+    </div>
+
+    <ul class="navbar">
+      <a class="current-nav" href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a>Contact</a>
+    </ul>
+  </nav>
+
+  <div class="home-container" id="home">
+    <div id="home-bg"></div>
+    <div class="title-container">
+      <div class="main-title hidden">
+        <div class="resto-name">Hacienda</div>
+        <div class="resto-name">Secreta</div>
+
+        <div class="description1">
+          <div class="line"></div>
+          <div>Food • Restaurant • Family</div>
+          <div class="line"></div>
         </div>
-        <div>Secreta</div>
+
+        <div class="description2">
+          Unveiling Authentic Flavors, Hacienda Style!
+        </div>
       </div>
 
-      <ul class="navbar">
-        <a class="current-nav">Home</a>
-        <a>Menu</a>
-        <a>Contact</a>
-      </ul>
-    </nav>
-
-
-    <div class="home-container">
-      <div id="home-bg"></div>
-             <div class="title-container">
-                 <div class="main-title">
-                    <div class="resto-name">Hacienda</div>
-                <div class="resto-name">Secreta</div>
-
-                <div class="description1">
-                    <div class="line"></div>
-                    <div>Food • Restaurant • Family</div>
-                    <div class="line"></div>
-                </div>
-
-                <div class="description2">Unveiling Authentic Flavors, Hacienda Style!</div>
-                 </div>
-
-                 <button id="viewMore" class="viewMoreAnim">View More</button>
-             </div>
-
-             <div id="mainpic-container">
-             <img src="images/mainPic.svg" alt="" id="mainPic">
-              <div id="bigCircle"></div>
-              <div id="smallCircle"></div>
-             </div>
-             <div id="mainShape"></div>
+      <button id="viewMore" class="viewMoreAnim">View More</button>
     </div>
 
-    <div class="second-container">
-          <div id="viewMenu">View Menu</div>
+    <div id="mainpic-container">
+      <img src="images/bg/mainPic.svg" alt="" id="mainPic" class="hidden" />
+      <div id="bigCircle"></div>
+      <div id="smallCircle"></div>
+    </div>
+    <div id="mainShape" class="mainShapenot"></div>
+  </div>
 
-         <ul class="category-container">
+  <div class="menu-container" id="menu">
+    <div id="menu-bg"></div>
+    <div id="viewMenu">
+      <div class="hidden">MENU</div>
+    </div>
 
-           <li>
-              <img src="images/lumpia.jpg" alt="">
-              <div>STARTERS & SOUPS</div>
-              <a href="">Read More</a>
-           </li>
-
-           <li>
-            <img src="images/paksiw.jpg" alt="">
-            <div>MAIN COURSERS</div>
-            <a href="">Read More</a>
-          </li>
-
-         <li>
-          <img src="images/icecream.jpg" alt="">
-          <div>DESSERTS</div>
-          <a href="">Read More</a>
-        </li>
-
-       <li>
-        <img src="images/tea.jpg" alt="">
-        <div>DRINKS</div>
-        <a href="">Read More</a>
+    <ul class="category-container">
+      <li class="hidden">
+        <div class="category-image-container">
+          <img src="images/menu/lumpia.jpg" alt="" />
+        </div>
+        <div>STARTERS & SOUPS</div>
+        <a href="#starters"  class="readMore">Read More</a>
       </li>
 
-         </ul>
+      <li class="hidden">
+        <div class="category-image-container">
+        <img src="images/menu/paksiw.jpg" alt="" />
+      </div>
+        <div>MAIN COURSERS</div>
+        <a href="#main-courses" class="readMore">Read More</a>
+      </li>
+
+      <li class="hidden">
+        <div class="category-image-container">
+        <img src="images/menu/icecream.jpg" alt="" />
+      </div>
+        <div>DESSERTS</div>
+        <a href="#desserts" class="readMore">Read More</a>
+      </li>
+
+      <li class="hidden">
+        <div class="category-image-container">
+        <img src="images/menu/tea.jpg" alt="" />
+      </div>
+        <div>DRINKS</div>
+        <a href="#drinks" class="readMore">Read More</a>
+      </li>
+    </ul>
+
+    <div class="menuOpen">
+      <div class="back">
+        <div><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.99994 9.99997L3.29294 10.707L2.58594 9.99997L3.29294 9.29297L3.99994 9.99997ZM20.9999 18C20.9999 18.2652 20.8946 18.5195 20.707 18.7071C20.5195 18.8946 20.2652 19 19.9999 19C19.7347 19 19.4804 18.8946 19.2928 18.7071C19.1053 18.5195 18.9999 18.2652 18.9999 18H20.9999ZM8.29294 15.707L3.29294 10.707L4.70694 9.29297L9.70694 14.293L8.29294 15.707ZM3.29294 9.29297L8.29294 4.29297L9.70694 5.70697L4.70694 10.707L3.29294 9.29297ZM3.99994 8.99997H13.9999V11H3.99994V8.99997ZM20.9999 16V18H18.9999V16H20.9999ZM13.9999 8.99997C15.8565 8.99997 17.6369 9.73747 18.9497 11.0502C20.2624 12.363 20.9999 14.1435 20.9999 16H18.9999C18.9999 14.6739 18.4732 13.4021 17.5355 12.4644C16.5978 11.5268 15.326 11 13.9999 11V8.99997Z" fill="#666666"/>
+          </svg>
+          </div>
+          <div>Back</div>
+   </div>
+      <div id="starters">
+       <div class="menu-icon">
+        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M25 8.33203C24.3406 8.8053 23.8064 9.43197 23.4434 10.1579C23.0805 10.8839 22.8997 11.6872 22.9167 12.4987C22.8997 13.3101 23.0805 14.1135 23.4434 14.8395C23.8064 15.5654 24.3406 16.1921 25 16.6654M33.3333 8.33203C32.674 8.8053 32.1397 9.43197 31.7768 10.1579C31.4138 10.8839 31.233 11.6872 31.25 12.4987C31.233 13.3101 31.4138 14.1135 31.7768 14.8395C32.1397 15.5654 32.674 16.1921 33.3333 16.6654M16.6667 8.33203C16.0073 8.8053 15.4731 9.43197 15.1101 10.1579C14.7471 10.8839 14.5663 11.6872 14.5833 12.4987C14.5663 13.3101 14.7471 14.1135 15.1101 14.8395C15.4731 15.5654 16.0073 16.1921 16.6667 16.6654M8.33333 22.9154H41.6667C42.2192 22.9154 42.7491 23.1349 43.1398 23.5256C43.5305 23.9163 43.75 24.4462 43.75 24.9987V26.0404C43.75 29.1654 38.5062 37.6508 35.4167 39.582V41.6654C35.4167 42.2179 35.1972 42.7478 34.8065 43.1385C34.4158 43.5292 33.8859 43.7487 33.3333 43.7487H16.6667C16.1141 43.7487 15.5842 43.5292 15.1935 43.1385C14.8028 42.7478 14.5833 42.2179 14.5833 41.6654V39.582C11.0687 37.3862 6.25 29.1654 6.25 26.0404V24.9987C6.25 24.4462 6.46949 23.9163 6.86019 23.5256C7.25089 23.1349 7.7808 22.9154 8.33333 22.9154Z" stroke="#1B1B1B" stroke-opacity="0.95" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>          
+       </div>
+       
+       <ul class="foods">
+
+        <li class="hidden">
+          <div class="name-container">
+              <div class="menu-food-name">Lumpiang Sariwa</div>
+              <div class="menu-food-price">&#8369XX.XX</div>
+          </div>
+
+          <div class="menu-food-image-container">
+            <img src="/images/foods/sariwa.jpg" alt="" class="menu-food-image">
+          </div>
+          <div class="menu-food-description">Fresh spring rolls, veggies, shrimp, & peanut sauce</div>
+        </li>
+
+        <li class="hidden">
+          <div class="name-container">
+              <div class="menu-food-name">Tokwa't Baboy</div>
+              <div class="menu-food-price">&#8369XX.XX</div>
+          </div>
+
+          <div class="menu-food-image-container">
+            <img src="/images/foods/tokwat-baboy-.jpg" alt="" class="menu-food-image">
+          </div>
+          <div class="menu-food-description">Crispy tofu & pork with tangy soy-vinegar dip</div>
+        </li>
+
+        <li class="hidden">
+          <div class="name-container">
+              <div class="menu-food-name">Kinilaw</div>
+              <div class="menu-food-price">&#8369XX.XX</div>
+          </div>
+
+          <div class="menu-food-image-container">
+            <img src="/images/foods/kinilaw.jpg" alt="" class="menu-food-image">
+          </div>
+          <div class="menu-food-description">Filipino ceviche with raw fish, vinegar & spices</div>
+        </li>
+
+
+        <li class="hidden">
+          <div class="name-container">
+              <div class="menu-food-name">Sinigang</div>
+              <div class="menu-food-price">&#8369XX.XX</div>
+          </div>
+
+         
+          <div class="menu-food-image-container">
+            <img src="/images/foods/Sinigang.jpg" alt="" class="menu-food-image">
+          </div>
+          <div class="menu-food-description">Sour tamarind-based broth with pork or shrimp & veggies</div>
+        </li>
+
+        
+        <li class="hidden">
+          <div class="name-container">
+              <div class="menu-food-name">Sizzling Sisig</div>
+              <div class="menu-food-price">&#8369XX.XX</div>
+          </div>
+
+          <div class="menu-food-image-container">
+            <img src="/images/foods/sizzling sisig.jpg" alt="" class="menu-food-image">
+          </div>
+          <div class="menu-food-description">Sizzling chopped pork face with spices & onions</div>
+        </li>        
+       </ul>
+      </div>
+
+      
+      <div id="main-courses">
+        <div class="menu-icon">
+          <svg width="38" height="36" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M35.625 24.3512C35.625 14.1127 29.0494 5.66499 20.625 4.55811V0H16.875V4.55811C8.45062 5.66499 1.875 14.1127 1.875 24.3512V28.7787H35.625V24.3512ZM5.625 24.3512C5.625 15.8084 11.5144 8.855 18.75 8.855C25.9856 8.855 31.875 15.8084 31.875 24.3512H5.625ZM0 30.9925H37.5V35.42H0V30.9925Z" fill="black"/>
+            </svg>
+            
+        </div>
+        
+        <ul class="foods">
+ 
+         <li class="hidden">
+           <div class="name-container">
+               <div class="menu-food-name">Adobo</div>
+               <div class="menu-food-price">&#8369XX.XX</div>
+           </div>
+ 
+           <div class="menu-food-image-container">
+             <img src="/images/foods/adobo.jpg" alt="" class="menu-food-image">
+           </div>
+           <div class="menu-food-description">Vinegar-soy marinated chicken or pork stew</div>
+         </li>
+ 
+         <li class="hidden">
+           <div class="name-container">
+               <div class="menu-food-name">Kare-Kare</div>
+               <div class="menu-food-price">&#8369XX.XX</div>
+           </div>
+ 
+           <div class="menu-food-image-container">
+             <img src="/images/foods/kare-kare.jpg" alt="" class="menu-food-image">
+           </div>
+           <div class="menu-food-description">Savory peanut stew with oxtail & vegetables</div>
+         </li>
+ 
+         <li class="hidden">
+           <div class="name-container">
+               <div class="menu-food-name">Lechon Kawali</div>
+               <div class="menu-food-price">&#8369XX.XX</div>
+           </div>
+ 
+           <div class="menu-food-image-container">
+             <img src="/images/foods//lechon.jpg" alt="" class="menu-food-image">
+           </div>
+           <div class="menu-food-description">Crispy pork belly with liver sauce</div>
+         </li>
+ 
+ 
+         <li class="hidden">
+           <div class="name-container">
+               <div class="menu-food-name">Pancit Palabok</div>
+               <div class="menu-food-price">&#8369XX.XX</div>
+           </div>
+ 
+          
+           <div class="menu-food-image-container">
+             <img src="/images/foods/panci-palabok.jpg" alt="" class="menu-food-image">
+           </div>
+           <div class="menu-food-description">Rice noodles with shrimp & flavorful sauces</div>
+         </li>
+    
+        </ul>
+       </div>
+
+
+
+         
+      <div id="desserts">
+        <div class="menu-icon">
+          <svg width="38" height="36" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M35.625 24.3512C35.625 14.1127 29.0494 5.66499 20.625 4.55811V0H16.875V4.55811C8.45062 5.66499 1.875 14.1127 1.875 24.3512V28.7787H35.625V24.3512ZM5.625 24.3512C5.625 15.8084 11.5144 8.855 18.75 8.855C25.9856 8.855 31.875 15.8084 31.875 24.3512H5.625ZM0 30.9925H37.5V35.42H0V30.9925Z" fill="black"/>
+            </svg>
+            
+        </div>
+        
+        <ul class="foods">
+ 
+         <li class="hidden">
+           <div class="name-container">
+               <div class="menu-food-name">Halo Halo</div>
+               <div class="menu-food-price">&#8369XX.XX</div>
+           </div>
+ 
+           <div class="menu-food-image-container">
+             <img src="/images/foods/halohalo.jpg" alt="" class="menu-food-image">
+           </div>
+           <div class="menu-food-description">Mixed shaved ice, beans, fruits, & ice cream</div>
+         </li>
+ 
+         <li class="hidden">
+           <div class="name-container">
+               <div class="menu-food-name">Bibingka</div>
+               <div class="menu-food-price">&#8369XX.XX</div>
+           </div>
+ 
+           <div class="menu-food-image-container">
+             <img src="/images/foods/bibingka.jpg" alt="" class="menu-food-image">
+           </div>
+           <div class="menu-food-description"> Coconut rice cake with cheese & egg.</div>
+         </li>
+ 
+         <li class="hidden">
+           <div class="name-container">
+               <div class="menu-food-name">Leche Flan</div>
+               <div class="menu-food-price">&#8369XX.XX</div>
+           </div>
+ 
+           <div class="menu-food-image-container">
+             <img src="/images/foods/leche flan.jpg" alt="" class="menu-food-image">
+           </div>
+           <div class="menu-food-description"> Caramel custard made with eggs & milk</div>
+         </li>
+ 
+ 
+         <li class="hidden">
+           <div class="name-container">
+               <div class="menu-food-name">Turon</div>
+               <div class="menu-food-price">&#8369XX.XX</div>
+           </div>
+ 
+          
+           <div class="menu-food-image-container">
+             <img src="/images/foods/turon.jpg" alt="" class="menu-food-image">
+           </div>
+           <div class="menu-food-description"> Fried banana rolls with caramelized sugar</div>
+         </li>
+
+
+         <li class="hidden">
+          <div class="name-container">
+              <div class="menu-food-name">Puto Cheese</div>
+              <div class="menu-food-price">&#8369XX.XX</div>
+          </div>
+
+         
+          <div class="menu-food-image-container">
+            <img src="/images/foods/puto.jpg" alt="" class="menu-food-image">
+          </div>
+          <div class="menu-food-description">Steamed rice cakes with cheese topping</div>
+        </li>
+
+        <li class="hidden">
+          <div class="name-container">
+              <div class="menu-food-name">Ube Halaya</div>
+              <div class="menu-food-price">&#8369XX.XX</div>
+          </div>
+
+         
+          <div class="menu-food-image-container">
+            <img src="/images/foods/ube halaya.jpg" alt="" class="menu-food-image">
+          </div>
+          <div class="menu-food-description">Sweet creamy dessert from purple yam</div>
+        </li>
+    
+        </ul>
+       </div>
+
+
+         
+      <div id="drinks">
+        <div class="menu-icon">
+          <svg width="38" height="36" viewBox="0 0 38 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M35.625 24.3512C35.625 14.1127 29.0494 5.66499 20.625 4.55811V0H16.875V4.55811C8.45062 5.66499 1.875 14.1127 1.875 24.3512V28.7787H35.625V24.3512ZM5.625 24.3512C5.625 15.8084 11.5144 8.855 18.75 8.855C25.9856 8.855 31.875 15.8084 31.875 24.3512H5.625ZM0 30.9925H37.5V35.42H0V30.9925Z" fill="black"/>
+            </svg>
+            
+        </div>
+        
+        <ul class="foods">
+ 
+         <li class="hidden">
+           <div class="name-container">
+               <div class="menu-food-name">Sago't Gulaman</div>
+               <div class="menu-food-price">&#8369XX.XX</div>
+           </div>
+ 
+           <div class="menu-food-image-container">
+             <img src="/images/foods/sago't gulaman.jpg" alt="" class="menu-food-image">
+           </div>
+           <div class="menu-food-description">Tapioca & jelly drink with brown sugar</div>
+         </li>
+ 
+         <li class="hidden">
+           <div class="name-container">
+               <div class="menu-food-name">Tsokolate</div>
+               <div class="menu-food-price">&#8369XX.XX</div>
+           </div>
+ 
+           <div class="menu-food-image-container">
+             <img src="/images/foods/tsokolate.jpg" alt="" class="menu-food-image">
+           </div>
+           <div class="menu-food-description">Rich hot chocolate with local cocoa</div>
+         </li>
+ 
+         <li class="hidden">
+           <div class="name-container">
+               <div class="menu-food-name">Barako Coffee</div>
+               <div class="menu-food-price">&#8369XX.XX</div>
+           </div>
+ 
+           <div class="menu-food-image-container">
+             <img src="/images/foods/barako.png" alt="" class="menu-food-image">
+           </div>
+           <div class="menu-food-description"> Strong coffee from Liberica beans</div>
+         </li>
+ 
+ 
+         <li class="hidden">
+           <div class="name-container">
+               <div class="menu-food-name">Iced Tea</div>
+               <div class="menu-food-price">&#8369XX.XX</div>
+           </div>
+ 
+          
+           <div class="menu-food-image-container">
+             <img src="/images/foods/icetea.jpg" alt="" class="menu-food-image">
+           </div>
+           <div class="menu-food-description"> Refreshing tea served over ice, often sweetened</div>
+         </li>
+
+         <li class="hidden">
+          <div class="name-container">
+              <div class="menu-food-name">Buko Juice</div>
+              <div class="menu-food-price">&#8369XX.XX</div>
+          </div>
+
+         
+          <div class="menu-food-image-container">
+            <img src="/images/foods/buko juice.jpg" alt="" class="menu-food-image">
+          </div>
+          <div class="menu-food-description"> Fresh coconut water served straight from the coconut</div>
+        </li>
+
+        <li class="hidden">
+          <div class="name-container">
+              <div class="menu-food-name">Mango Shake</div>
+              <div class="menu-food-price">&#8369XX.XX</div>
+          </div>
+
+         
+          <div class="menu-food-image-container">
+            <img src="/images/foods/mangoshake.jpg" alt="" class="menu-food-image">
+          </div>
+          <div class="menu-food-description">Blended ripe mangoes with milk and ice</div>
+        </li>
+    
+        </ul>
+       </div>
+
 
     </div>
-  </body>
+  </div>
+</body>
+
 </html>

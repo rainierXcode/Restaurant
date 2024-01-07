@@ -1,0 +1,135 @@
+#small-box-yellow{
+    filter: blur(5px);
+    transform: translateX(-140px);
+    animation: yellowBox-intersect 700ms forwards ease-in;
+}
+
+@keyframes yellowBox-intersect {
+    to{
+        filter: blur(0);
+        transform: translateX(0);
+    }
+}
+
+#mainShape{
+    filter: blur(5px);
+    right: -20vw;
+    bottom: -20vh;
+    animation: mainShape-intersect 700ms forwards ease-in;
+}
+
+@keyframes mainShape-intersect {
+        to{
+            filter: blur(0);
+            right: 0vw;
+            bottom: 0vw;
+        }
+}
+
+#logo, #secreta, .navbar a{
+    transform: scale(0);
+    opacity: 0;
+    filter: blur(5px);
+    animation: fadeIn 700ms forwards;
+}
+
+@keyframes fadeIn {
+    to{
+        filter: blur(0);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+#mainPic{
+    animation: pulse 1s ease-in-out forwards;
+}
+
+#smallCircle, #bigCircle{
+    animation: pulse 2s ease-in-out infinite;
+}
+
+#bigCircle{
+    animation-delay: 1s;
+}
+
+#smallCircle{
+    animation-delay: 1.5s;
+}
+
+@keyframes pulse {
+0% {
+    transform: scale(1);
+}
+50% {
+    transform: scale(1.1);
+}
+100% {
+    transform: scale(1);
+}
+}
+
+.resto-name, .description1, .description2{
+    opacity: 0;
+    scale: 0;
+    animation: mainTitle 1s ease-in-out forwards 500ms;
+}
+
+.resto-name{
+    animation-duration: 1.5s;
+}
+
+#viewMore{
+    opacity: 0;
+    scale: 0;
+    animation: mainTitle 500ms ease-in-out forwards 2s;
+}
+
+@keyframes mainTitle {
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+.category-container li:nth-child(2){
+    transition-delay: 200ms;
+}
+
+.category-container li:nth-child(3){
+    transition-delay: 400ms;
+}
+
+.category-container li:nth-child(4){
+    transition-delay: 600ms;
+}
+
+#mainShape{
+    transition: transform 1s;
+}
+
+#mainShape.mainShapenot{
+    transform: translateX(200%);
+}
+
+#mainShape.mainShapeIX{
+    transform: translateX(0);
+}
+
+
+
+.hidden{
+    opacity: 0 ;
+    filter: blur(5px) ;
+    transform: translateX(-100%) ;
+    transition: all 1.5s ;
+}
+
+.show{
+    opacity: 1 ;
+    filter: blur(0) ;
+    transform: translateX(0) ;
+}
+

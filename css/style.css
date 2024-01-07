@@ -148,7 +148,7 @@ nav {
   font-size: 70px;
   color: #ffff;
   font-weight: 700;
-  text-shadow: 2px 2px #ffd700;
+  text-shadow: 2px 2px #254653;
 }
 
 .description1 {
@@ -173,7 +173,9 @@ nav {
 #viewMore {
   width: 80px;
   height: 30px;
-  outline: none;
+  display: flex;
+  align-items: center;
+  padding: 5px;
   border: none;
   background-color: #fdd691;
   color: #000000;
@@ -257,7 +259,7 @@ nav {
 }
 
 .menu-container {
-  min-height: 100vh;
+  min-height: max-content;
   background-color: #fff;
   position: relative;
 }
@@ -304,9 +306,9 @@ position: absolute;
   gap: 25px;
   justify-content: center;
   align-self: center;
-  height: 500px;
-  padding-bottom: 50px;
+  height: 400px;
   padding-top: 20px;
+  padding-bottom: 50px;
 }
 
 .category-container li {
@@ -486,4 +488,208 @@ position: absolute;
 
 #starters, #main-courses{
   display: none;
+}
+
+
+.additional-container{
+  height:400px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: url('/images/bg/story.webp');
+  position: relative;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+}
+
+
+
+.additional-container div{
+  color: #fff;
+  font-weight: bolder;
+  font-size: 70px;
+  color: white; 
+  text-shadow: 3px 3px #254653;
+  -webkit-text-stroke: 1.5px #254653;
+}
+#contact-container {
+  padding: 20px 0px 50px 0px;
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden; 
+  height: max-content;
+  width: 100%;
+}
+
+
+
+#contact-bg{
+  width: 100%;
+  background: url('/images/bg/contactBg.jpg');
+  background-size: cover;
+  position: absolute;
+  top:0;
+  bottom: 0;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+
+.contact-whole{
+  display: flex;
+  justify-content: space-around;
+}
+
+
+.contact-text{
+  text-align: center;
+  font-family: "Italianno", cursive;
+  font-size: 70px;
+  margin-bottom: 40px;
+}
+
+.information li{
+  margin-bottom: 20px;
+}
+
+.info-name{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.info-details{
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.contact-left ul li, .sched-date li {
+  list-style: none;
+}
+
+.info-socialmedia{
+  display: flex;
+  gap: 10px
+}
+
+.info-socialmedia-bg{
+  background-color: #FDD691;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.book-box{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.book-box div{
+  margin-bottom: 5px;
+}
+
+.book-box div:first-child{
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+
+.book-box div input{
+  height: 35px;
+  width: 100%;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+
+.book-box button{
+  height: 25px;
+  color: #000;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #FDD691;
+  width: 40%;
+  font-weight: 700;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  align-items: center;
+}
+
+.book-button-container{
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+}
+
+
+ #sched ul{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+#sched{
+  gap: 10px;
+  background-color: #ffd700;
+  width: max-content;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+  box-sizing: border-box;
+  padding: 20px 50px 20px 50px;
+}
+
+#sched ul{
+  gap: 5px;
+}
+
+#sched div, .sched-date li{
+  font-family: "Josefin Sans", sans-serif;
+  color: #000;
+}
+
+#sched div:first-child{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.sched-date li{
+  font-size: 14px;
+}
+
+
+footer{
+  position: relative;
+  height: 100px;
+  background-color: #1b1b1b;
+  display: flex;
+  justify-content: center;
+}
+
+.credit{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.credit p{
+  font-family: "Josefin Sans", sans-serif;
 }

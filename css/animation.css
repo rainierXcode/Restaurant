@@ -133,3 +133,34 @@
     transform: translateX(0) ;
 }
 
+.additional-container-animation {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    animation: typeWriter 4s steps(40) forwards;
+    display: inline-block; /* Aligns text properly */
+    vertical-align: middle; /* Centers text vertically */
+  }
+  
+  @keyframes typeWriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  
+
+  .fadeOut{
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+  }
+
+  .fadeIn{
+    opacity: 1;
+    filter: blur(0);
+  }
+

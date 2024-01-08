@@ -27,7 +27,7 @@ body::after {
 }
 
 nav {
-  margin-top: 20px;
+  padding: 10px 0;
   width: 100vw;
   height: var(--navbar-height);
   position: fixed;
@@ -62,7 +62,7 @@ nav {
 }
 .header-left div:nth-child(3) {
   font-family: "Italianno", cursive;
-  font-size: 35px;
+  font-size: 2.5rem;
   display: flex;
   padding-top: 5px;
   text-align: center;
@@ -79,7 +79,7 @@ nav {
 
 .navbar a {
   color: #9a8b8b;
-  font-size: 20px;
+  font-size: 1.2rem;
   text-decoration: none;
 }
 
@@ -145,7 +145,7 @@ nav {
 
 .resto-name {
   font-family: "Josefin Sans", sans-serif;
-  font-size: 70px;
+  font-size: 4.5rem;
   color: #ffff;
   font-weight: 700;
   text-shadow: 2px 2px #254653;
@@ -156,12 +156,12 @@ nav {
   align-items: center;
   gap: 5px;
   font-family: "Kameron", serif;
-  font-size: 25px;
+  font-size: 1.6rem;
 }
 
 .description2 {
   font-family: "Kameron", serif;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .line {
@@ -171,17 +171,17 @@ nav {
 }
 
 #viewMore {
-  width: 80px;
   height: 30px;
   display: flex;
   align-items: center;
-  padding: 5px;
+  padding: 3px 10px;
   border: none;
   background-color: #fdd691;
   color: #000000;
   font-family: "Kameron", serif;
-  font-weight: 700;
+  font-weight: 600;
   transition: transform 300ms ease;
+  font-size: 1rem;
 }
 
 #viewMore:hover {
@@ -197,8 +197,12 @@ nav {
 }
 
 #mainpic-container {
-  width: 500px;
-  height: 500px;
+  width: 45vw;
+  height: 45vw;
+  max-width: 500px; 
+  max-height: 500px;
+  min-width: 200px; 
+  min-height: 200px;
   position: absolute;
   right: 8vw;
   bottom: 15vh;
@@ -279,7 +283,7 @@ position: absolute;
 #viewMenu{
   text-align: center;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 60px;
+  font-size: 3.5rem;
   color: #000;
   height: 35vh;
   width: 100%;
@@ -306,7 +310,7 @@ position: absolute;
   gap: 25px;
   justify-content: center;
   align-self: center;
-  height: 400px;
+  flex-wrap: wrap;
   padding-top: 20px;
   padding-bottom: 50px;
 }
@@ -322,7 +326,7 @@ position: absolute;
 .category-container li div {
   color: #000;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 20px;
+  font-size: 1.2rem;
   font-weight: 600px;
 }
 
@@ -349,7 +353,7 @@ position: absolute;
   align-items: center;
   padding: 3px;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 1rem;
   border-radius: 10px;
 }
 
@@ -445,11 +449,11 @@ position: absolute;
 
 .menu-food-price{
   margin-left: auto;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 .menu-food-description{
-  font-size: 14px;
+  font-size: .9rem;
 }
 
 
@@ -510,7 +514,7 @@ position: absolute;
 .additional-container div{
   color: #fff;
   font-weight: bolder;
-  font-size: 70px;
+  font-size: 3.5rem;
   color: white; 
   text-shadow: 3px 3px #254653;
   -webkit-text-stroke: 1.5px #254653;
@@ -541,13 +545,14 @@ position: absolute;
 .contact-whole{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 
 .contact-text{
   text-align: center;
   font-family: "Italianno", cursive;
-  font-size: 70px;
+  font-size: 3.5rem;
   margin-bottom: 40px;
 }
 
@@ -557,13 +562,13 @@ position: absolute;
 
 .info-name{
   font-family: "Josefin Sans", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
 }
 
 .info-details{
   font-family: "Josefin Sans", sans-serif;
-  font-size: 14px;
+  font-size: .8rem;
   font-weight: 400;
 }
 
@@ -618,7 +623,7 @@ position: absolute;
   background-color: #FDD691;
   width: 40%;
   font-weight: 700;
-  font-size: 10px;
+  font-size: .65rem;
   display: flex;
   justify-content: center;
   outline: none;
@@ -665,12 +670,12 @@ position: absolute;
 }
 
 #sched div:first-child{
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 .sched-date li{
-  font-size: 14px;
+  font-size: .9rem;
 }
 
 
@@ -692,4 +697,113 @@ footer{
 
 .credit p{
   font-family: "Josefin Sans", sans-serif;
+}
+
+
+
+@media screen and (min-width: 1000px) and (max-width: 1250px){
+  #mainShape{
+    width: 50vw;
+    height: 50vh;
+    max-width: 500px;
+    max-height: 500px;
+  }
+
+  #mainpic-container{
+    right: 5vw;
+    bottom: 10vh;
+  }
+
+  .title-container{
+    left: 25%;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  nav{
+    background-color: #fff;
+    display: block;
+    height: auto;
+  }
+
+  .header-left{
+    margin-bottom: 10px;
+    height: 35px;
+  }
+
+  .navbar{
+    background-color: #C0C0C0;
+    flex-direction: column;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2)
+  }
+
+  .navbar a{
+    padding: 10px 20px;
+    color: #1B1B1B;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .navbar a:first-child, .navbar a:nth-child(2){
+    border-bottom: 2px solid #b0a5a5;
+  }
+
+  #secreta{
+    color: #000;
+  }
+
+  .header-left div:nth-child(2){
+    display: none;
+  }
+
+  #bigCircle, #smallCircle{
+    display: none;
+  }
+  
+  #mainShape{
+    clip-path: none;
+    animation: none;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 40vh;
+  }
+
+  .title-container{
+    left: 50%;
+    top: 75%;
+    width: 100vw;
+  }
+
+  #mainpic-container{
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    top: 40vh;
+    width: 90vw;
+    height: 50vh;
+    max-width: 500px;
+    max-height: 500px;
+    transform: translate(-50%, -50%);
+  }
+
+  #small-box-yellow{
+    width: 100px;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .resto-name{
+    font-size: 3rem;
+  }
+
+  .description1{
+    font-size: 1.2rem;
+  }
+
+  .description2, #viewMore{
+    font-size: .8rem;
+  }
 }

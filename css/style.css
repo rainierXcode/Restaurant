@@ -257,7 +257,7 @@ nav {
 }
 
 #home-bg {
-  background-image: url("./images/bg/urlBg.jpg");
+  background-image: URL("../images/bg/urlBg.jpg");
   background-size: cover;
   opacity: 0.3;
 }

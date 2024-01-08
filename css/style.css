@@ -257,7 +257,7 @@ nav {
 }
 
 #home-bg {
-  background-image: url("/images/bg/urlBg.jpg");
+  background-image: url("./images/bg/urlBg.jpg");
   background-size: cover;
   opacity: 0.3;
 }
@@ -269,7 +269,7 @@ nav {
 }
 
 #menu-bg{
-background: url('/images/bg/secondUrlBg.jpg');
+background: url('./images/bg/secondUrlBg.jpg');
 background-size: cover;
 opacity: 0.5;
 height: 100%;
@@ -289,7 +289,7 @@ position: absolute;
   width: 100%;
   opacity: 0.9;
   margin-bottom: 30px;
-  background: url("/images/bg/filipino-food.png");
+  background: url("./images/bg/filipino-food.png");
   background-size: cover;
   display: flex;
   align-items: center;
@@ -503,7 +503,7 @@ position: absolute;
   align-items: center;
   justify-content: center;
   width: 100%;
-  background: url('/images/bg/story.webp');
+  background: url('./images/bg/story.webp');
   position: relative;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   background-size: cover;
@@ -532,7 +532,7 @@ position: absolute;
 
 #contact-bg{
   width: 100%;
-  background: url('/images/bg/contactBg.jpg');
+  background: url('./images/bg/contactBg.jpg');
   background-size: cover;
   position: absolute;
   top:0;

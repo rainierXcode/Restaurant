@@ -193,8 +193,17 @@ function navbar(){
   })
 }
 
+function navbarListener(){
+  const nav = document.querySelector('.navbar');
+  const button = document.querySelector('.navbar-button');
 
+  button.addEventListener('click', ()=>{
+    nav.style.display = 'flex';
+    button.style.display = 'none';
+  })
+}
 
+navbarListener();
 homeObserver();
 menuObserver();
 contactObserver();

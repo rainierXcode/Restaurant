@@ -699,9 +699,52 @@ footer{
   font-family: "Josefin Sans", sans-serif;
 }
 
+.navbar-button{
+  display: none;
+}
 
+@media screen and (max-width: 1000px) {
+  .navbar-button{
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: -2px;
+    transform: translate(-50%, -50%);
+    width: 40px;
+  }
+
+  .navbar-button{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navbar-button li{
+    border-top: 4px solid #9A8B8B;
+    height: 5px;
+  }
+  
+  .header-left{
+    position: relative;
+  }
+
+  .navbar{
+    display: none;
+  }
+}
 
 @media screen and (min-width: 1000px) and (max-width: 1250px){
+
+  .navbar-button{
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #000000;
+    top: 5px;
+    right: 5px;
+
+  }
+
   #mainShape{
     width: 50vw;
     height: 50vh;
@@ -858,7 +901,7 @@ footer{
   }
 }
 
-/*
+
 @media screen and (max-width: 400px) {
   .resto-name{
     font-size: 3rem;
@@ -871,4 +914,4 @@ footer{
   .description2, #viewMore{
     font-size: .8rem;
   }
-} */
+}

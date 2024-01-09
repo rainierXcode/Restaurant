@@ -204,6 +204,7 @@ function navbarListener() {
   const button = document.querySelector('.navbar-button');
   const nav = document.querySelector("nav");
   const close = document.querySelector('.navbar-close')
+  const list = document.querySelectorAll(".navbar a");
 
 
   if (button) {
@@ -224,6 +225,17 @@ function navbarListener() {
     })
   }
 
+  if(isScreenWidthBelow1000()){
+    console.log("Ok")
+    list.forEach(a =>{
+      a.addEventListener('click', () =>{
+        nav.classList.remove('navOpen');
+        close.style.display = 'none'
+        navbar.style.display = 'none'
+        button.style.display = 'flex'
+      })
+    })
+  }
 }
 
 navbarListener();
@@ -232,12 +244,11 @@ menuObserver();
 contactObserver();
 observer();
 fadeObserver();
-navbar();
 additionalContainer();
 directToFoods();
 nameContainerDesign();
 
 if (!isScreenWidthBelow1000()) {
-  console.log('not')
   scroll();
+  navbar();
 }

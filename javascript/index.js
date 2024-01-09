@@ -1,3 +1,7 @@
+function isScreenWidthBelow1000() {
+  return window.innerWidth < 1000;
+}
+
 function scroll() {
   const nav = document.querySelector('nav');
   let lastScrollTop = 0;
@@ -24,63 +28,65 @@ function scroll() {
 }
 
 
-function currentNavObserver(current){
-  const nav = document.querySelectorAll(".navbar a");
-  nav.forEach(n => {n.classList.remove('current-nav')});
-  current.classList.add("current-nav")
+function currentNavObserver(current) {
+  if(!isScreenWidthBelow1000()){
+    const nav = document.querySelectorAll(".navbar a");
+    nav.forEach(n => { n.classList.remove('current-nav') });
+    current.classList.add("current-nav")
+  }
 }
 
-function homeObserver(){
-  const homeObserver = new IntersectionObserver(entries =>{
+function homeObserver() {
+  const homeObserver = new IntersectionObserver(entries => {
     const shape = document.getElementById("mainShape");
     const home = document.querySelector(".navbar a:first-child");
-  
-    entries.forEach(entry =>{
-     if(entry.isIntersecting){
+
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
         shape.classList.add("mainShapeIX")
         currentNavObserver(home)
-     }
-  
-     else{
-       shape.classList.remove("mainShapeIX")
-     }
-   })
+      }
+
+      else {
+        shape.classList.remove("mainShapeIX")
+      }
+    })
   })
-  
+
   homeObserver.observe(document.querySelector('.home-container'))
 }
 
-function menuObserver(){
-  const menuObserver = new IntersectionObserver(entries =>{
+function menuObserver() {
+  const menuObserver = new IntersectionObserver(entries => {
     const menu = document.querySelector(".navbar a:nth-child(2)");
-  
-    entries.forEach(entry =>{
-     if(entry.isIntersecting){
+
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
         currentNavObserver(menu)
-     }
-   })
+      }
+    })
   })
-  
+
   menuObserver.observe(document.querySelector('.menu-container'))
 }
 
-function contactObserver(){
-  const contactObserver = new IntersectionObserver(entries =>{
+function contactObserver() {
+  const contactObserver = new IntersectionObserver(entries => {
     const contact = document.querySelector(".navbar a:nth-child(3)");
-  
-    entries.forEach(entry =>{
-     if(entry.isIntersecting){
+
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
         currentNavObserver(contact)
-     }
-   })
+      }
+    })
   })
-  
+
   contactObserver.observe(document.getElementById('contact-container'))
 }
 
 
 
-function observer(){
+function observer() {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -89,27 +95,27 @@ function observer(){
         entry.target.classList.remove('show');
       }
     });
-  }, {threshol: 1})
-  
+  }, { threshol: 1 })
+
   const hidden = document.querySelectorAll(".hidden");
   hidden.forEach(el => observer.observe(el));
-  
+
 }
 
-function fadeObserver(){
-  const observer = new IntersectionObserver(entries =>{
-    entries.forEach(entry =>{
-      if(entry.isIntersecting){
+function fadeObserver() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
         entry.target.classList.add('fadeIn');
       }
-      else{
+      else {
         entry.target.classList.remove('fadeIn');
       }
     })
-  }, {threshol: 0.75})
+  }, { threshol: 0.75 })
 
   const fadeIn = document.querySelectorAll('.fadeOut');
-  fadeIn.forEach(f =>{observer.observe(f)});
+  fadeIn.forEach(f => { observer.observe(f) });
 }
 
 
@@ -130,47 +136,47 @@ function nameContainerDesign() {
   });
 }
 
-  document.querySelector(".back").addEventListener('click',() =>{
-    document.querySelector(".menuOpen").style.display = 'none';
-    document.getElementById("viewMenu").style.display = 'flex';
-    document.querySelector(".category-container").style.display = 'flex';
-  })
+document.querySelector(".back").addEventListener('click', () => {
+  document.querySelector(".menuOpen").style.display = 'none';
+  document.getElementById("viewMenu").style.display = 'flex';
+  document.querySelector(".category-container").style.display = 'flex';
+})
 
 
 
-function directToFoods(){
+function directToFoods() {
   const readMore = document.querySelectorAll(".readMore");
-    readMore.forEach(anchor =>{
-      anchor.addEventListener('click', (event)=>{
-        event.preventDefault();
-        const toShow = document.getElementById(anchor.getAttribute('href').substring(1));
-        document.getElementById("viewMenu").style.display = 'none';
-        document.querySelector('.category-container').style.display = 'none';
-        document.querySelector(".menuOpen").style.display = 'block';
-        readMore.forEach(anchor =>{
-          document.getElementById(anchor.getAttribute('href').substring(1)).style.display = 'none';
-        })
-        document.getElementById(anchor.getAttribute('href').substring(1)).style.display = 'block';
+  readMore.forEach(anchor => {
+    anchor.addEventListener('click', (event) => {
+      event.preventDefault();
+      const toShow = document.getElementById(anchor.getAttribute('href').substring(1));
+      document.getElementById("viewMenu").style.display = 'none';
+      document.querySelector('.category-container').style.display = 'none';
+      document.querySelector(".menuOpen").style.display = 'block';
+      readMore.forEach(anchor => {
+        document.getElementById(anchor.getAttribute('href').substring(1)).style.display = 'none';
       })
+      document.getElementById(anchor.getAttribute('href').substring(1)).style.display = 'block';
     })
+  })
 }
 
 let isFirst = true;
-function additionalContainer(){
-  const observer = new IntersectionObserver(entries =>{
-    entries.forEach(entry =>{
-      if(entry.isIntersecting){
-        if(isFirst){
+function additionalContainer() {
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (isFirst) {
           entry.target.classList.add("additional-container-animation");
           isFirst = false;
         }
-        else{
+        else {
           entry.target.classList.remove("additional-container-animation");
           entry.target.classList.add("hidden");
           entry.target.classList.add("show");
         }
       }
-      else{
+      else {
         entry.target.classList.remove("show");
       }
     })
@@ -180,27 +186,44 @@ function additionalContainer(){
   observer.observe(addsText)
 }
 
-function navbar(){
+function navbar() {
   const nav = document.querySelectorAll(".navbar a");
   const navbar = document.querySelector(".navbar")
 
-  nav.forEach( n =>{
-    n.addEventListener('click', ()=>{
-      nav.forEach(n =>{n.classList.remove('current-nav')})
+  nav.forEach(n => {
+    n.addEventListener('click', () => {
+      nav.forEach(n => { n.classList.remove('current-nav') })
       n.classList.add('current-nav');
       navbar.style.opacity = 1;
     })
   })
 }
 
-function navbarListener(){
-  const nav = document.querySelector('.navbar');
+function navbarListener() {
+  const navbar = document.querySelector('.navbar');
   const button = document.querySelector('.navbar-button');
+  const nav = document.querySelector("nav");
+  const close = document.querySelector('.navbar-close')
 
-  button.addEventListener('click', ()=>{
-    nav.style.display = 'flex';
-    button.style.display = 'none';
-  })
+
+  if (button) {
+    button.addEventListener('click', () => {
+      nav.classList.add('navOpen')
+      close.style.display = 'block';
+      navbar.style.display = 'flex';
+      button.style.display = 'none';
+    })
+  }
+
+  if(close){
+    close.addEventListener('click', () =>{
+      nav.classList.remove('navOpen');
+      close.style.display = 'none'
+      navbar.style.display = 'none'
+      button.style.display = 'flex'
+    })
+  }
+
 }
 
 navbarListener();
@@ -213,4 +236,8 @@ navbar();
 additionalContainer();
 directToFoods();
 nameContainerDesign();
-scroll();
+
+if (!isScreenWidthBelow1000()) {
+  console.log('not')
+  scroll();
+}

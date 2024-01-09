@@ -447,14 +447,11 @@ overflow: hidden;
 }
 
 .menu-food-image-container img, .category-image-container img{
-transform-origin: 0 0;
-transition: transform .25s, visibility .25s ease-in;
+  transition: transform .5s ease;
 }
 
 .menu-food-image-container:hover img, .category-image-container:hover img{
-transition: transform .5s ease-in-out;
-transform: scale(1.4);
-transform-origin: 0 0;
+  transform: scale(1.5);
 }
 
 .menu-food-name, .menu-food-price, .menu-food-description{

@@ -205,11 +205,15 @@ function navbarListener() {
   const header = document.querySelector("header");
   const close = document.querySelector('.navbar-close')
   const list = document.querySelectorAll(".navbar a");
+  const nav = document.querySelector('nav')
 
 
   if (button) {
     button.addEventListener('click', () => {
       header.classList.add('navOpen')
+      if(isScreenWidthBelow1000()){
+        nav.classList.add('navOpen2');
+      }
       close.style.display = 'block';
       navbar.style.display = 'flex';
       button.style.display = 'none';
@@ -219,6 +223,7 @@ function navbarListener() {
   if(close){
     close.addEventListener('click', () =>{
       header.classList.remove('navOpen');
+      nav.classList.remove('navOpen2');
       close.style.display = 'none'
       navbar.style.display = 'none'
       button.style.display = 'flex'
@@ -229,6 +234,7 @@ function navbarListener() {
     list.forEach(a =>{
       a.addEventListener('click', () =>{
         header.classList.remove('navOpen');
+         nav.classList.remove('navOpen2');
         close.style.display = 'none'
         navbar.style.display = 'none'
         button.style.display = 'flex'

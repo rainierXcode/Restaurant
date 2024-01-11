@@ -764,13 +764,19 @@ display: none;
 
 @media screen  and (max-width: 767px) {
 
+body{
+  overflow: hidden;
+}
 
 header{
   background-color: #fff;
   box-shadow: 9px 13px 10px rgba(0, 0, 0, 0.1);
-  position: relative;
+  box-sizing: border-box;
 }
 
+.navOpen2{
+  width: 100%;
+}
 .navOpen{
   flex-direction: column;
   align-items: flex-start;
@@ -778,19 +784,37 @@ header{
   padding-bottom: 0;
 }
 
-.navbar a, .logo{
+.logo, .navbar a{
   padding-left: 15px;
+}
+
+.navbar-close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.navbar-button{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 32px;
+  height: 35px;
+  gap: 7px;
+  margin-right: 10px;
+}
+
+.invisible{
+  display: none;
 }
 
 .navbar{
   display: none;
   flex-direction: column;
-  width: 100vw;
   border-top: 1px solid gray;
-  gap:0
+  gap:0;
+  box-sizing: border-box
 }
-
-
 
 .navbar a {
   color: #1B1B1B;
@@ -805,28 +829,6 @@ header{
 
 .navbar a:nth-child(3){
   border-bottom: none;
-}
-
-
-
-.invisible{
-  display: none;
-}
-.navbar-button{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 32px;
-  padding-right: 10px;
-  height: 35px;
-  gap: 7px;
-}
-
-.navbar-close{
-  padding-right: 10px;
-  position: absolute;
-  right: 10px;
-  top: 10px;
 }
 
 .navbar-button li{

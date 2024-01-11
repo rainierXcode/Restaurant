@@ -2,6 +2,9 @@
 
 This project is a non-webpack version of this [repository](https://github.com/rainierXcode/Restaurant-Page-Webpack) and is a responsive and accessible restaurant page featuring navigation tabs.
 
+## :link: LIVE DEMO
+[Hacienda Secreta Restaurant](https://rainierxcode.github.io/Restaurant/)
+
 
  ## :bulb: Features
  * **Responsive Design*Accessibility**
@@ -11,7 +14,7 @@ This project is a non-webpack version of this [repository](https://github.com/ra
  * **HTML**
  * **JAVASCRIPT**
  * **CSS**
- * **WEBPACK**  
+
 
 ## Screenshots
 ![](images/screenshots/image1.png)

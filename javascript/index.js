@@ -3,7 +3,7 @@ function isScreenWidthBelow1000() {
 }
 
 function scroll() {
-  const nav = document.querySelector('nav');
+  const header = document.querySelector('header');
   let lastScrollTop = 0;
   let isScrollingUp = false;
 
@@ -12,13 +12,13 @@ function scroll() {
 
     if (currentScroll > lastScrollTop) {
       if (isScrollingUp) {
-        nav.style.opacity = 0;
+        header.style.opacity = 0;
         isScrollingUp = false;
       }
     } else {
       // Scrolling up
       if (!isScrollingUp) {
-        nav.style.opacity = 1;
+        header.style.opacity = 1;
         isScrollingUp = true;
       }
     }
@@ -202,14 +202,14 @@ function navbar() {
 function navbarListener() {
   const navbar = document.querySelector('.navbar');
   const button = document.querySelector('.navbar-button');
-  const nav = document.querySelector("nav");
+  const header = document.querySelector("header");
   const close = document.querySelector('.navbar-close')
   const list = document.querySelectorAll(".navbar a");
 
 
   if (button) {
     button.addEventListener('click', () => {
-      nav.classList.add('navOpen')
+      header.classList.add('navOpen')
       close.style.display = 'block';
       navbar.style.display = 'flex';
       button.style.display = 'none';
@@ -218,7 +218,7 @@ function navbarListener() {
 
   if(close){
     close.addEventListener('click', () =>{
-      nav.classList.remove('navOpen');
+      header.classList.remove('navOpen');
       close.style.display = 'none'
       navbar.style.display = 'none'
       button.style.display = 'flex'
@@ -226,10 +226,9 @@ function navbarListener() {
   }
 
   if(isScreenWidthBelow1000()){
-    console.log("Ok")
     list.forEach(a =>{
       a.addEventListener('click', () =>{
-        nav.classList.remove('navOpen');
+        header.classList.remove('navOpen');
         close.style.display = 'none'
         navbar.style.display = 'none'
         button.style.display = 'flex'
